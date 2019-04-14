@@ -6,6 +6,8 @@ I combined this with some functionality for sending SMS messages, sending email 
 
 The demo is coded as a simple Java application and is deployed as an AWS Lambda function, accessable as a REST API.
 
+If you'd like to see an example of AWS Lambda functions using RDS, I also have this project (but it's not currently deployed in my AWS environment): https://github.com/yvettequinby/aws-java-lambda
+
 
 ## Functionality
 
