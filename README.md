@@ -6,6 +6,8 @@ I combined this with some functionality for sending SMS messages, sending email 
 
 The demo is coded as a simple Java application and is deployed as an AWS Lambda function, accessable as a REST API.
 
+__I can give an end-to-end demo of the API and walk-through of my AWS set-up in-person at the next interview.__ Due to security and cost restrictions, I'd rather not publish the public API endpoint here :)
+
 If you'd like to see an example of AWS Lambda functions using RDS, I also have this project (but it's not currently deployed in my AWS environment): https://github.com/yvettequinby/aws-java-lambda
 
 
@@ -15,8 +17,8 @@ The demo has on single _post_ REST API endpoint, which accepts a JSON object in 
 
 ```
 {
-  "recipientSms": "+31636431212",
-  "recipientEmail": "yvette.quinby@protonmail.com",
+  "recipientSms": "+31XXXXXXXXX",
+  "recipientEmail": "xxx.xxxxx@gmail.com",
   "text": "I hate the rain. All the water is bad."
 }
 ```
@@ -53,15 +55,15 @@ When a valid message is sent to the REST API endpoint, the following occurs:
 
 Using Postman, you may access the API:
 
-POST https://ay0tymdoke.execute-api.eu-west-1.amazonaws.com/MoodMsgBot
+POST << -- URL TO BE PROVIDED IN DEMO -- >>
 
 After a successful post, an SMS and email should be sent to the specified recipients, informing them of the sentiment of the message.
 
 ### Example Positive Message (JSON Body)
 ```
 {
-  "recipientSms": "+31636431212",
-  "recipientEmail": "yvette.quinby@protonmail.com",
+  "recipientSms": "+31XXXXXXXXX",
+  "recipientEmail": "xxx.xxxxx@gmail.com",
   "text": "I love the beach. Swimming is great."
 }
 ```
@@ -69,8 +71,8 @@ After a successful post, an SMS and email should be sent to the specified recipi
 ### Example Negative Message (JSON Body)
 ```
 {
-  "recipientSms": "+31636431212",
-  "recipientEmail": "yvette.quinby@protonmail.com",
+  "recipientSms": "+31XXXXXXXXX",
+  "recipientEmail": "xxx.xxxxx@gmail.com",
   "text": "I hate the rain. All the water is bad."
 }
 ```
@@ -78,8 +80,8 @@ After a successful post, an SMS and email should be sent to the specified recipi
 ### Example Neutral Message (JSON Body)
 ```
 {
-  "recipientSms": "+31636431212",
-  "recipientEmail": "yvette.quinby@protonmail.com",
+  "recipientSms": "+31XXXXXXXXX",
+  "recipientEmail": "xxx.xxxxx@gmail.com",
   "text": "The car is red. Cars go fast."
 }
 ```
